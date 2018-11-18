@@ -21,4 +21,26 @@ Los valores introducidos al archivo sysctl.conf ¿que representan?
 	\\Otro parámetro,, /proc/sys/fs/aio-nrproporciona el número actual de solicitudes asíncronas en todo el sistema.
 	\\Se recomienda que establezca el aio-max-nrvalor en 1048576. Esto ayuda a HyperScale a tener un rendimiento óptimo, en un entorno que involucra grandes cargas de trabajo de E / S
 
+\item net.core-rmem.default
+	\\El valor por default y maximo de memoria para envio de paquetes.
+	\\Un parámetro de kernel que controla el tamaño predeterminado de búferes de recepción utilizado por conectores. Para configurarlo, ejecute el siguiente comando:
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=8cm]{./Imagenes/ajhordy}
+\end{center}
+\end{figure}
+
+Nota:
+\\Remplace N por el tamaño en bytes del búfer deseado. Para determinar el valor para este parámetro de kernel, vea {/proc/sys/net/core/rmem\_default} 
+\\Tenga en cuenta que el valor de rmem\_default no debería ser mayor que rmem\_max ; en caso de serlo, aumente el valor de rmem\_max.
+
+	\item net.core.rmem.max
+	\\Ajusta el m\'aximo de bufer de recepci\'on para todos los protocolos
+\vspace*{0.10in}
+
+
+Nota:
+\\Memoria de almacenamiento temporal de informaci\'on que permite transferir los datos entre unidades funcionales con caracter\'isticas de transferencia diferentes.
+
 \end{itemize} 
