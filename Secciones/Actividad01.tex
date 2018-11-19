@@ -43,4 +43,22 @@ Nota:
 Nota:
 \\Memoria de almacenamiento temporal de informaci\'on que permite transferir los datos entre unidades funcionales con caracter\'isticas de transferencia diferentes.
 
+           \item net.core.wmem.max
+\\Por ejemplo, escriba  "sysctl -w net.core.wmem_max = 262144" :
+\\Esto establece el tamaño máximo del búfer de envío del sistema operativo para todos los tipos de conexiones.
+
+           \item net.core.wmem_default
+\\Por ejemplo, escriba  "sysctl -w net.core.wmem_default = 262144":  
+\\Esto establece el tamaño del búfer de envío del sistema operativo predeterminado para todos los tipos de conexiones.
+
+\begin{figure}[htb]
+\begin{center}
+\\La configuración por defecto en bytes del búfer de envío de socket:
+\includegraphics[width=8cm]{./Imagenes/netcorewmendefault}
+\end{center}
+\end{figure}
+
+Nota: 
+\\En resumen dan valor por default y maximo de memoria para envio de paquetes.
+
 \end{itemize} 
